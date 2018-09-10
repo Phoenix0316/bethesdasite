@@ -1,0 +1,365 @@
+/* Bethesda' Custom Homepage CSS Stylesheet*/
+
+html {
+  font-size: 16px;
+  font-family: arial;
+  color: rgba(180, 0, 0, 1);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+h1 {
+  font-family: playball;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@font-face {
+  font-family: 'Playball';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playball'), local('Playball-Regular'), url(https://fonts.gstatic.com/s/playball/v7/TK3gWksYAxQ7jbsKcg8Eneo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.playball {
+  font-family: Playball;
+}
+
+li a {
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+}
+
+li a:hover {
+  color: rgba(255, 0, 0, 1);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  padding: .25rem 0rem;
+  top: 0;
+  border-bottom: .125rem solid orange;
+}
+
+.headmargin {
+  margin-top: 4.5rem;
+}
+
+header img {
+  height: 4rem;
+}
+
+.icon {
+  margin-left: 1rem;
+}
+
+header menu {
+  font-size: 1.2rem;
+}
+
+menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* "For Flex-Flow to work in Explorer" */
+  display: -webkit-flex;
+        display: -ms-flexbox;
+    display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-flow: row wrap;
+    flex-wrap: wrap;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+}
+
+menu a {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  padding: .5rem .25rem;
+  margin: 0rem 1rem;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5rem;
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+}
+
+menu a:hover {
+  background-color: rgba(100, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.row {
+  flex-flow: row;
+}
+
+.column {
+  flex-flow: column;
+}
+
+.section {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: 42rem;
+  border-bottom: .125rem solid orange;
+}
+
+.section h1 {
+  font-size: 3rem;
+}
+
+.sectionpad {
+  padding: 3rem 0rem 2rem 0rem;
+}
+
+.section iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 70%;
+  justify-content: center;
+  flex-flow: wrap;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .6);
+  color: rgba(100, 0, 0, 1);
+  padding-bottom: .5rem;
+}
+
+.welcome h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  text-shadow:
+  -.1875rem -.1875rem 0 rgba(255,255,255, 1),
+  .1875rem -.1875rem 0 rgba(255,255,255, 1),
+  -.1875rem .1875rem 0 rgba(255,255,255, 1),
+  .1875rem .1875rem 0 rgba(255,255,255, 1);
+}
+
+.tempframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.tempframe iframe {
+  width: 60%;
+  height: 80%;
+  color: maroon;
+  padding: 1rem;
+}
+
+.temptext {
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  background-color: rgba(255, 255, 255, .9);
+  color: maroon;
+  line-height: 3rem;
+  border-radius: 1rem;
+  width: auto;
+  padding: .5rem;
+}
+
+.temptext h1 {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  border-bottom: .125rem solid orange;
+  padding: 3rem 0rem 2.5rem 0rem;
+}
+
+footer div {
+  padding: 1rem 0rem;
+}
+
+footer h1 {
+  font-size: 2.5rem;
+}
+
+.map {
+  width: 30%;
+  min-height: 24rem;
+  background-color: rgba(255, 255, 255, .9);
+  color: maroon;
+  margin: 1rem;
+  flex-grow: 1rem;
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+}
+
+.map iframe {
+  width: 100%;
+  height: 60%;
+}
+
+.map a:hover {
+  color: red;
+}
+
+.address {
+  padding: .5rem;
+  line-height: 1.4;
+  text-align: center;
+
+}
+
+.social {
+  display: flex;
+  flex-flow: column;
+  width: 7.5%;
+  min-height: 24rem;
+  flex-grow: 1rem;
+  justify-content: space-around;
+}
+
+.social a img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.weekly {
+  display: flex;
+  justify-content: center;
+  width: 26%;
+  min-height: 24rem;
+  background-color: rgba(255, 255, 255, .95);
+  color: maroon;
+  margin: 1rem;
+  line-height: 2.5;
+  padding: 0rem .5rem;
+  flex-grow: 1rem;
+  text-align: center;
+
+}
+
+.sitemap {
+  display: flex;
+  align-items: center;
+  width: 16%;
+  min-height: 24rem;
+  background-color: rgba(160, 0, 0, .9);
+  margin: 1rem;
+  flex-grow: 1rem;
+}
+
+.sitemap menu {
+  display: flex;
+  flex-flow: column;
+  color: rgba(255, 255, 255, 1);
+}
+
+.sitemap a {
+  background-color: rgba(160, 0, 0, 0);
+  padding: 1rem 0rem;
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+}
+
+.sitemap a:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(100, 0, 0, 1);
+}
+
+.curvature {
+  border-radius: .5rem;
+}
+
+
+/* "Background Section" */
+
+.backone {
+  background-image: url("../resources/media/goldrocky.png");
+  background-size: cover;
+  background-color: rgba( 0, 0, 0, , 2);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.backtwo {
+  background-image: url("../resources/media/cracked.jpg");
+  background-size: cover;
+  background-color: rgba( 0, 0, 0, 0);
+  background-blend-mode: saturation;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.backthree {
+  background-image: url("../resources/media/goldmarble.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.backfour {
+  background-image: url("../resources/media/sanctuary2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.backfive {
+  background-image: url("../resources/media/bethesda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.backsix {
+  background-image: url("../resources/media/splatter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.whiteglass {
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.singularity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: .5rem;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  height: 2rem;
+}
+
+.singularity h3 {
+  transition: .5s;
+  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+}
+
+.singularity h3:hover {
+  font-size: 1.25rem;
+}

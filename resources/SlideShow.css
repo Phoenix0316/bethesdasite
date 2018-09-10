@@ -1,0 +1,108 @@
+
+.mySlides {
+  display: none
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 2s;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.slidetext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f2f2;
+  font-size: 2rem;
+  padding: .5rem 0rem;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(128, 0, 0, .9);
+  height: 2rem;
+  position: absolute;
+  top: 87.5%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: .75rem;
+  padding: .5rem .75rem;
+  position: absolute;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  position: relative;
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  margin: 0 .0675rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color .5s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: ease-in-out;
+  -webkit-animation-duration: 3s;
+  animation-name: ease-in-out;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {font-size: .75rem}
+}
